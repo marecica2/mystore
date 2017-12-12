@@ -1,0 +1,11 @@
+#spring:
+#  application:
+#    name: mystore-web
+#  data:
+#    mongodb:
+#      host: docker
+#      username: admin
+#      password: admin
+#      port: 27017
+#      repositories:
+#        enabled: true

@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mongo:
+    image: mongo:3.5
+    container_name: mongo
+    environment:
+       # - MONGO_INITDB_ROOT_USERNAME=root
+       # - MONGO_INITDB_ROOT_PASSWORD=root
+        - MONGODB_PASS=mystore
+    ports:
+      - "27017:27017"
+    volumes:
+     #- /etc/mongod.conf:/etc/mongod.conf
+     - /data/db/:/var/lib/mongo
+    command: ["mongod",  "--bind_ip_all"]
+
+
+#  mystore-web:
+#    build:
+#      context: .
+#      dockerfile: mystore-web.dockerfile
+#    ports:
+#    - "8080:8080"
+#    links:
+#    - mongo
+#    volumes:
+#    - /home/marekb/:/custom/folder/:rw #directory must be located inside c:/users/  (write rights)
