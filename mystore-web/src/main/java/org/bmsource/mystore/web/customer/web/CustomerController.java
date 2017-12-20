@@ -25,8 +25,8 @@ public class CustomerController {
     }
 
     @PostMapping()
-    public Customer createCustomer(Customer customer) {
-        return repository.save(customer);
+    public Customer createCustomer(@RequestBody Customer customer) {
+        return repository.insert(customer);
     }
 
     @PutMapping("/{customerId}")
