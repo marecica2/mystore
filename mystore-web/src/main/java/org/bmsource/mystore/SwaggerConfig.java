@@ -1,4 +1,4 @@
-package org.bmsource.mystore.web;
+package org.bmsource.mystore;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

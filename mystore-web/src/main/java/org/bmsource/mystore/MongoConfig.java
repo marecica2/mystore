@@ -1,4 +1,4 @@
-package org.bmsource.mystore.web;
+package org.bmsource.mystore;
 
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
@@ -10,8 +10,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 import java.util.Collections;
 
 @Configuration
-@EnableMongoRepositories("org.bmsource.mystore.web.customer")
-public class MyStoreConfig {
+@EnableMongoRepositories("org.bmsource.mystore")
+public class MongoConfig {
 
     @Bean
     public MongoClient mongoClient() {
