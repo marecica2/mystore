@@ -3,6 +3,7 @@ package org.bmsource.mystore;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
@@ -11,6 +12,7 @@ import java.util.Collections;
 
 @Configuration
 @EnableMongoRepositories("org.bmsource.mystore")
+@ComponentScan("org.bmsource.mystore")
 public class MongoConfig {
 
     @Bean
