@@ -1,0 +1,40 @@
+<nav aria-label="breadcrumb" role="navigation">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item">
+			<a [routerLink]="['/admin/']">Administration</a>
+		</li>
+		<li class="breadcrumb-item">
+			<a [routerLink]="['/admin/users']">Users</a>
+		</li>
+		<li class="breadcrumb-item active" aria-current="page">{{user?.firstName}} {{user?.lastName}}</li>
+	</ol>
+</nav>
+<h2>User detail: {{user?.firstName}} {{user?.lastName}}</h2>
+<form>
+	<div class="form-group">
+		<label for="login">Id</label>
+		<input [(ngModel)]="user.id" name="id" type="text" class="form-control" id="id" placeholder="id" readonly>
+	</div>
+	<div class="form-group">
+		<label for="login">Login</label>
+		<input [(ngModel)]="user.login" name="login" type="text" class="form-control" id="login" placeholder="Login">
+	</div>
+	<div class="form-group">
+		<label for="firstName">First Name</label>
+		<input [(ngModel)]="user.firstName" name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name">
+	</div>
+	<div class="form-group">
+		<label for="firstName">Last Name</label>
+		<input [(ngModel)]="user.lastName" name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
+	</div>
+	<div class="form-group">
+		<ng-container *ngIf="user.id">
+			<button (click)="save(user);" class="btn btn-primary">Update</button>
+		</ng-container>
+		<ng-container *ngIf="!user.id">
+			<button (click)="save(user);" class="btn btn-primary">Create</button>
+		</ng-container>
+		&nbsp;
+		<a [routerLink]="['../']">back</a>
+	</div>
+</form>

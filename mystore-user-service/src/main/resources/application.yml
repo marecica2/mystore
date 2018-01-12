@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: mystore-web
+  data:
+    mongodb:
+      host: docker
+      username: admin
+      password: admin
+      port: 27017
+      repositories:
+        enabled: true
+security:
+  oauth2:
+    resource:
+      id: oauth2_id
+server:
+    port: 8081
