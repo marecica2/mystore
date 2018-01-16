@@ -6,7 +6,7 @@ import {UserComponent} from './users/user.component';
 import {AdminComponent} from './admin.component';
 import {ProductsComponent} from './products/products.component';
 import {AdminDashboardComponent} from './admin.dashboard.component';
-import { AuthGuard } from '../auth.guard';
+import { AuthGuard } from '../authentication/auth.guard';
 
 const adminRoutes: Routes = [
   {

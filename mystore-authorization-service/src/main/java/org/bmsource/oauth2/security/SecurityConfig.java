@@ -36,11 +36,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-                .formLogin().disable() // disable form authentication
-                .anonymous().disable() // disable anonymous user
-                .httpBasic().and()
-                // restricting access to authenticated users
-                .authorizeRequests().anyRequest().authenticated();
+        .formLogin().disable() 
+        .anonymous().disable()
+        .httpBasic().and()
+        .authorizeRequests().anyRequest().authenticated();
     }
 
     @Override
@@ -53,7 +52,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     @Bean
     public AuthenticationManager authenticationManagerBean() throws Exception {
-        // provides the default AuthenticationManager as a Bean
         return super.authenticationManagerBean();
     }
 }

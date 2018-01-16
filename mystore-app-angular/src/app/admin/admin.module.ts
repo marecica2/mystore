@@ -1,17 +1,18 @@
-import { AuthInterceptor } from './../auth.interceptor';
+
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 
-import { AuthGuard } from '../auth.guard';
+import { AuthGuard } from './../authentication/auth.guard';
 
 import {AdminComponent} from './admin.component';
-import {UsersComponent} from './users/users.component';
 import {AdminRoutingModule} from './admin-routing.module';
-import {ProductsComponent} from './products/products.component';
+import {AdminDashboardComponent} from './admin.dashboard.component';
+import {UsersComponent} from './users/users.component';
 import {UserService} from './users/user.service';
 import {UserComponent} from './users/user.component';
-import {AdminDashboardComponent} from './admin.dashboard.component';
+import {ProductsComponent} from './products/products.component';
+
 
 
 @NgModule({

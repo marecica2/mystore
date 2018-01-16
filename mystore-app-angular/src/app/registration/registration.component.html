@@ -1,0 +1,26 @@
+<h2>Create new account</h2>
+<form>
+	<div class="form-group">
+		<label for="login">Email / Login</label>
+		<input [(ngModel)]="account.username" name="login" type="text" class="form-control" id="login" placeholder="Email">
+	</div>
+	<div class="form-group">
+		<label for="login">Password</label>
+		<input [(ngModel)]="account.password" name="login" type="password" class="form-control" id="password" placeholder="Password">
+	</div>
+	<div class="form-group">
+		<label for="login">Repeat password</label>
+		<input [(ngModel)]="passwordRepeat" name="login" type="password" class="form-control" id="passwordRepeat" placeholder="Repeat password">
+	</div>
+	<div class="form-group">
+		<label for="firstName">First Name</label>
+		<input [(ngModel)]="account.firstName" name="firstName" type="text" class="form-control" id="firstName" placeholder="First Name">
+	</div>
+	<div class="form-group">
+		<label for="firstName">Last Name</label>
+		<input [(ngModel)]="account.lastName" name="lastName" type="text" class="form-control" id="lastName" placeholder="Last Name">
+	</div>
+	<div class="form-group">
+		<button (click)="register(account);" class="btn btn-primary">Create</button>
+	</div>
+</form>
