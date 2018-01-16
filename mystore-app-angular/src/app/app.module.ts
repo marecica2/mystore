@@ -18,8 +18,8 @@ import { AuthenticationModule, Account } from './authentication/authentication.m
 
 @NgModule({
   imports: [
-    HttpClientModule,
     BrowserModule,
+    HttpClientModule,
     FormsModule,
     HttpModule,
     CommonModule,
